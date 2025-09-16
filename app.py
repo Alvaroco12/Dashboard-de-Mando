@@ -46,10 +46,28 @@ elif menu == "Chronos: Estrategia":
     
     if estrategia == "Fortaleza Verde":
         st.image("images/fortaleza_verde.webp", caption="Visión: Fortaleza Verde")
-        st.write("Defensa: Una ciudad sostenible y resiliente para el futuro de Madrid.")
+        st.write("""
+            La **Fortaleza Verde** representa una ciudad sostenible y resiliente para el futuro de Madrid.
+            
+            - Apuesta por energías limpias y transporte no contaminante.  
+            - Integra la logística en una red urbana eficiente y respetuosa con el medioambiente.  
+            - Refuerza la seguridad alimentaria y energética a largo plazo.  
+            - Hace de Madrid un referente europeo en sostenibilidad y resiliencia urbana.  
+            
+            Esta visión no solo asegura el crecimiento económico, sino que también garantiza el bienestar de los ciudadanos y el cumplimiento de los objetivos climáticos internacionales.
+            """)
     else:
         st.image("images/bunker_tecnologico.webp", caption="Visión: Búnker Tecnológico")
-        st.write("Defensa: Madrid como bastión tecnológico blindado y seguro.")
+        st.write("""
+            El **Búnker Tecnológico** posiciona a Madrid como un bastión de innovación y seguridad.
+            
+            - Refuerza la ciberseguridad y protege la infraestructura crítica.  
+            - Apuesta por la automatización y la inteligencia artificial para la logística.  
+            - Crea un ecosistema económico altamente competitivo y tecnológicamente avanzado.  
+            - Garantiza la soberanía digital frente a amenazas globales.  
+            
+            Esta visión asegura que ChronoLogistics y Madrid se consoliden como líderes internacionales en tecnología y resiliencia frente a crisis globales.
+            """)
 
 # ========== K-Lang
 
