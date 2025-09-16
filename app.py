@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 
 st.set_page_config(page_title="ChronoLogistics Dashboard", layout="wide")
-st.title("⚡ ChronoLogistics - Dashboard de Crisis")
+st.title("ChronoLogistics - Dashboard de Crisis")
 
 # FUNCIONES
 def predecir_riesgo(velocidad, lluvia):
