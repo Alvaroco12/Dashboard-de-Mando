@@ -82,3 +82,15 @@ elif menu == "K-Lang: Protocolos":
     st.subheader("Simulador de Protocolos en tiempo real")
     viento = st.slider("Velocidad del Viento (km/h)", 0, 150, 20)
     agua = st.slider("Nivel de Inundación (cm)", 0, 200, 0)
+
+
+    # Lógica protocolos
+    if viento > 90 or agua > 100:
+        protocolo_activo = "CÓDIGO ROJO"
+        color = "red"
+    elif viento > 40 or agua > 30:
+        protocolo_activo = "VÍSPERA"
+        color = "orange"
+    else:
+        protocolo_activo = "RENACIMIENTO"
+        color = "green"
