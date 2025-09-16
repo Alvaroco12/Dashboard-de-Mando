@@ -49,10 +49,10 @@ elif menu == "Chronos: Estrategia":
     
     if estrategia == "Fortaleza Verde":
         st.image("images/fortaleza_verde.webp", caption="Visión: Fortaleza Verde")
-        st.write("🌱 Defensa: Una ciudad sostenible y resiliente para el futuro de Madrid.")
+        st.write("Defensa: Una ciudad sostenible y resiliente para el futuro de Madrid.")
     else:
         st.image("images/bunker_tecnologico.webp", caption="Visión: Búnker Tecnológico")
-        st.write("🤖 Defensa: Madrid como bastión tecnológico blindado y seguro.")
+        st.write("Defensa: Madrid como bastión tecnológico blindado y seguro.")
 
 # ========== K-Lang
 
@@ -61,7 +61,7 @@ elif menu == "K-Lang: Protocolos":
     
     # Protocolo
     protocolo = st.selectbox("Selecciona Protocolo", ["VÍSPERA", "CÓDIGO ROJO", "RENACIMIENTO"])
-    st.write(f"📋 Ficha Técnica del protocolo {protocolo}")
+    st.write(f"Ficha Técnica del protocolo {protocolo}")
     
     # Sensores
     viento = st.slider("Velocidad del Viento (km/h)", 0, 150, 30)
@@ -69,4 +69,4 @@ elif menu == "K-Lang: Protocolos":
     
     #Protocolo
     activo = protocolo_activo(viento, inundacion)
-    st.subheader(f"🚨 Protocolo Activo: {activo}")
+    st.subheader(f"Protocolo Activo: {activo}")
