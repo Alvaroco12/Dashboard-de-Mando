@@ -5,13 +5,11 @@ st.set_page_config(page_title="ChronoLogistics Dashboard", layout="wide")
 st.title("ChronoLogistics - Dashboard de Crisis")
 
 # FUNCIONES
-def predecir_riesgo(velocidad, lluvia):
-    """Calcula un riesgo simulado en % basado en velocidad y lluvia"""
+def predecir_riesgo(velocidad, lluvia): # Simulación simple de riesgo
     riesgo = min(100, velocidad * 0.5 + lluvia * 1.2)
     return riesgo
 
-def protocolo_activo(viento, inundacion):
-    """Devuelve qué protocolo está activo según condiciones"""
+def protocolo_activo(viento, inundacion): # Determina protocolo activo
     if viento > 90 or inundacion > 80:
         return "CÓDIGO ROJO: TITÁN"
     elif viento > 50 or inundacion > 40:
@@ -57,16 +55,22 @@ elif menu == "Chronos: Estrategia":
 # ========== K-Lang
 
 elif menu == "K-Lang: Protocolos":
-    st.header("K-Lang - Manual de Batalla Interactivo")
-    
-    # Protocolo
-    protocolo = st.selectbox("Selecciona Protocolo", ["VÍSPERA", "CÓDIGO ROJO", "RENACIMIENTO"])
-    st.write(f"Ficha Técnica del protocolo {protocolo}")
-    
-    # Sensores
-    viento = st.slider("Velocidad del Viento (km/h)", 0, 150, 30)
-    inundacion = st.slider("Nivel de Inundación (cm)", 0, 200, 20)
-    
-    #Protocolo
-    activo = protocolo_activo(viento, inundacion)
-    st.subheader(f"Protocolo Activo: {activo}")
+    st.header("⚔️ K-Lang: Manual de Batalla Interactivo")
+
+    # Selector de protocolos
+    st.subheader("📖 Selector de Protocolos")
+    protocolos = {
+        "VÍSPERA": {
+            "Disparador": "Condiciones meteorológicas leves pero inestables.",
+            "Acciones": "- Activar monitoreo reforzado\n- Preparar equipo en alerta temprana\n- Revisar comunicaciones"
+        },
+        "CÓDIGO ROJO": {
+            "Disparador": "Tormenta intensa, vientos > 90 km/h o inundación grave.",
+            "Acciones": "- Evacuación parcial\n- Activar escudos logísticos\n- Suspender rutas críticas"
+        },
+        "RENACIMIENTO": {
+            "Disparador": "Tras la crisis, fase de recuperación.",
+            "Acciones": "- Reactivar infraestructuras\n- Evaluar daños\n- Iniciar protocolos de reconstrucción"
+        }
+    }
+
