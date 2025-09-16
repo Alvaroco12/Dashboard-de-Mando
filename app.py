@@ -116,7 +116,7 @@ elif menu == "K-Lang: Protocolos":
         # CÓDIGO ROJO -> alerta extrema
         # RENACIMIENTO -> recuperación
     if viento > 90 or agua > 100:
-        protocolo_activo = "CÓDIGO ROJO"
+        protocolo_activo = "CÓDIGO ROJO:TITÁN"
         color = "red"
     elif viento > 40 or agua > 30:
         protocolo_activo = "VÍSPERA"
