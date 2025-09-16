@@ -28,12 +28,21 @@ if menu == "Precog: Riesgo":
     st.image("images/mapa_clusters.jpg", caption="Mapa de Clústeres de Riesgo")
     
     # Simulador
-    velocidad = st.slider("Velocidad Media del Viento (km/h)", 0, 200, 50)
-    lluvia = st.slider("Intensidad de la Lluvia (mm/h)", 0, 200, 30)
+    velocidad = st.slider("Velocidad Media del Viento (km/h)", 0, 200, 20)
+    lluvia = st.slider("Intensidad de la Lluvia (mm/h)", 0, 200, 0)
     
     # Riesgo
     riesgo = predecir_riesgo(velocidad, lluvia)
-    st.metric("Nivel de Riesgo en Cascada", f"{riesgo:.1f}% - {'ALTO' if riesgo>70 else 'MEDIO' if riesgo>40 else 'BAJO'}")
+
+    # Umbrales ajustados: BAJO ≤30, MEDIO 30–60, ALTO >60
+    nivel = "ALTO" if riesgo > 60 else "MEDIO" if riesgo > 30 else "BAJO"
+    color = "red" if nivel == "ALTO" else "orange" if nivel == "MEDIO" else "green"
+
+    # Indicador visual
+    st.markdown(
+        f"<h2 style='color:{color};'>Nivel de Riesgo en Cascada: {riesgo:.1f}% - {nivel}</h2>",
+        unsafe_allow_html=True
+    )
 
 
 # ========== Chronos
@@ -116,8 +125,6 @@ elif menu == "K-Lang: Protocolos":
         protocolo_activo = "RENACIMIENTO"
         color = "green"
     
-
-
 
     # Resultado
     disparador = protocolos[protocolo_activo]["Disparador"]
