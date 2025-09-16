@@ -73,8 +73,12 @@ elif menu == "K-Lang: Protocolos":
             "Acciones": "- Reactivar infraestructuras\n- Evaluar daños\n- Iniciar protocolos de reconstrucción"
         }
     }
-    
+
     protocolo_sel = st.selectbox("Elige un protocolo", list(protocolos.keys()))
     st.write(f"**Disparador:** {protocolos[protocolo_sel]['Disparador']}")
     st.write(f"**Acciones:**\n{protocolos[protocolo_sel]['Acciones']}")
 
+    # Simulador
+    st.subheader("Simulador de Protocolos en tiempo real")
+    viento = st.slider("Velocidad del Viento (km/h)", 0, 150, 20)
+    agua = st.slider("Nivel de Inundación (cm)", 0, 200, 0)
