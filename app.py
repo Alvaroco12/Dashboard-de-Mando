@@ -96,5 +96,6 @@ elif menu == "K-Lang: Protocolos":
 
     # Resultado
     st.markdown(
-        f"<h2 style='color:{color};'>🚨 PROTOCOLO ACTIVO: {protocolo_activo}</h2>"
+        f"<h2 style='color:{color};'>PROTOCOLO ACTIVO: {protocolo_activo}</h2>",
+        unsafe_allow_html=True
     )
