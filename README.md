@@ -104,3 +104,7 @@ Proyecto realizado por **Álvaro** y **Nicolás** como parte de un ejercicio pr�
 Inspirado en el memorando ficticio de **ChronoLogistics** para la gestión de crisis.
 
 ---
+
+## Streamlit
+
+Enlace de la app en Streamlit: https://dashboard-de-mando-oemtjuaawfmumcwfkegrtp.streamlit.app
