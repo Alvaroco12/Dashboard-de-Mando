@@ -54,10 +54,10 @@ elif menu == "Chronos: Estrategia":
 # ========== K-Lang
 
 elif menu == "K-Lang: Protocolos":
-    st.header("⚔️ K-Lang: Manual de Batalla Interactivo")
+    st.header("K-Lang: Manual de Batalla Interactivo")
 
     # Selector de protocolos
-    st.subheader("📖 Selector de Protocolos")
+    st.subheader("Selector de Protocolos")
     protocolos = {
         "VÍSPERA": {
             "Disparador": "Condiciones meteorológicas leves pero inestables.",
