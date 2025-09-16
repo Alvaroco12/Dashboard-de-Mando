@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 
 st.set_page_config(page_title="ChronoLogistics Dashboard", layout="wide")
 st.title("ChronoLogistics - Dashboard de Crisis")
@@ -94,3 +93,8 @@ elif menu == "K-Lang: Protocolos":
     else:
         protocolo_activo = "RENACIMIENTO"
         color = "green"
+
+    # Resultado
+    st.markdown(
+        f"<h2 style='color:{color};'>🚨 PROTOCOLO ACTIVO: {protocolo_activo}</h2>"
+    )
