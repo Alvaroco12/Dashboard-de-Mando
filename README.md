@@ -100,7 +100,7 @@ El proyecto puede desplegarse fácilmente en:
 
 ## 🧑‍💻 Autor
 
-Proyecto realizado por **Álvaro** como parte de un ejercicio práctico de ingeniería informática.  
+Proyecto realizado por **Álvaro** y **Nicolás** como parte de un ejercicio práctico de ingeniería informática.  
 Inspirado en el memorando ficticio de **ChronoLogistics** para la gestión de crisis.
 
 ---
