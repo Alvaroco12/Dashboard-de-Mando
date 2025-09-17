@@ -116,7 +116,7 @@ elif menu == "K-Lang: Protocolos":
         # CÓDIGO ROJO -> alerta extrema
         # RENACIMIENTO -> recuperación
     if viento > 90 or agua > 100:
-        protocolo_activo = "CÓDIGO ROJO:TITÁN"
+        protocolo_activo = "CÓDIGO ROJO"
         color = "red"
     elif viento > 40 or agua > 30:
         protocolo_activo = "VÍSPERA"
@@ -127,9 +127,7 @@ elif menu == "K-Lang: Protocolos":
     
 
     # Resultado
-    disparador = protocolos[protocolo_activo]["Disparador"]
     st.markdown(
         f"<h2 style='color:{color};'>PROTOCOLO ACTIVO: {protocolo_activo}</h2>",
         unsafe_allow_html=True
     )
-    st.write(f"**Disparador:** {disparador}")
