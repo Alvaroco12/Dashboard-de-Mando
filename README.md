@@ -1,3 +1,4 @@
+https://github.com/Alvaroco12/Dashboard-de-Mando?tab=readme-ov-file
 # 🛰️ ChronoLogistics - Dashboard de Crisis
 
 **Proyecto académico** desarrollado en **Python + Streamlit** como respuesta al memorando interno de ChronoLogistics.  
